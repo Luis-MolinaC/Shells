@@ -5,7 +5,15 @@ import (
 )
 
 func Unset(args ...string) error {
-	// Placeholder implementation for unset command
-	fmt.Println("Unset command not implemented yet.")
+	if len(args) == 0 {
+		return errors.New("usage: unset NAME")
+	}
+
+	for _, arg := range args {
+		os.Unsetenv(arg)
+		fmt.Printf("Unset variable: %s\n", arg)
+	}
+
 	return nil
 }
+
