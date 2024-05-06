@@ -1,6 +1,6 @@
 # Shells
 
-Has 5 built in commands 
+Has 5 built in commands: 
 alias
 echo
 export
